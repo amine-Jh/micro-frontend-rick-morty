@@ -1,0 +1,25 @@
+<div class="card">
+     <div class="card-header">
+  Search for Episodes By Id
+  </div>
+  <div class="card-body">
+  <ul class="list_location" >
+    <li  *ngFor="let val of charArray"  class="card_location"  >  
+      {{val.name}}   
+    <div class="dimension">
+      {{val.dimension}}   
+    </div> 
+    
+    <div class="dimension">
+      {{val.type}}   
+    </div> 
+    </li>
+  </ul>
+  </div>
+  <div class="card-body">
+  <button type="button" id="angularincrementer" class="btn btn-outline-secondary">Increment Counter</button>
+  <button type="button" id="toggleme" style="float:right" class="btn btn-info">Toggle</button>
+  </div>
+
+ 
+</div>

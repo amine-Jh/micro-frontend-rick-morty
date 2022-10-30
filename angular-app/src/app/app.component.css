@@ -1,0 +1,14 @@
+.card_location{
+    border: 1px solid red;
+    width: 500px;
+    height: auto;
+    border-radius: 12px;
+    
+}
+
+.list_location{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}

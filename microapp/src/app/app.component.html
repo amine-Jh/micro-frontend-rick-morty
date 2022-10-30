@@ -1,0 +1,59 @@
+<div class="container">
+
+  
+
+      <div class="header">
+     Rick and Morty filter Demo 
+      </div>
+  <div class="filters">
+
+    <input type="text"  class="search" (change)="filterArtist($event.target.value)" placeholder="enter an artist name" />
+
+    <input type="text"  class="search" (change)="filterTrack($event.target.value)" placeholder="enter a track name" />
+    
+   <div class="filter-1">
+
+      <label for="sel1">Filter By Track table:</label>
+      <select class="form-control" (change)="filterAngular($event.target.value)" id="sel1">
+        <option value="0"></option>
+        <option *ngFor="let ang of languages" value={{ang}}>
+          {{ang}}
+        </option>
+      </select>
+    </div>
+
+   
+ <!-- 
+    <div class="col-3 text-center align-middle">
+      <label>Angular Counter: {{angcounter}}</label>
+
+    </div>
+    <div class="col-3">
+      <label for="sel2">Filter react table:</label>
+      <select class="form-control" (change)="filterReact($event.target.value)" id="sel2">
+        <option value="0"></option>
+        <option *ngFor="let rec of languages" value={{rec}}>
+          {{rec}}
+        </option>
+      </select>
+
+    </div>
+
+    <div class="col-3">
+
+      <label>React Counter: {{reccounter}}</label>
+    </div>
+
+     --> 
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-6">
+      <angular-app  trackname={{trackname}} selectedvalue={{ngselectedval}}></angular-app>
+    </div>
+    <div class="col-6">
+      <react-app></react-app>
+    </div>
+
+  </div>
+</div>
