@@ -27,27 +27,22 @@ export class AppComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.elementRef.nativeElement.querySelector('#angularincrementer')
-                                  .addEventListener('click', this.angularincrementer.bind(this), false);
-    this.elementRef.nativeElement.querySelector('#reactincrementer')
-                                  .addEventListener('click', this.reactincrementer.bind(this), false);
-    this.elementRef.nativeElement.querySelector('#toggleme')
-                                  .addEventListener('click', this.toggle.bind(this), false);
+    this.elementRef.nativeElement.querySelector('#reset_filter')
+                                  .addEventListener('click', this.reset.bind(this), false);
   }
 
-  angularincrementer = () => {
-    this.angcounter++;
-  }
 
   reactincrementer = () => {
     this.reccounter++;
   }
 
-  toggle = () => {
-
-    this.toggleval = !this.toggleval;
+  reset = () => {
+    console.log("reset ...")
     const rele = this.elementRef.nativeElement.querySelector('react-app');
-    rele.setAttribute('toggle', this.toggleval);
+    rele.setAttribute('artistName', undefined);
+
+    const rele1 = this.elementRef.nativeElement.querySelector('angular-app');
+    rele1.setAttribute('trackname', undefined);
   }
   filterReact(filterVal: any) {
     this.reactvalue = filterVal;
@@ -67,10 +62,8 @@ export class AppComponent implements OnInit,AfterViewInit {
   }
 
   filterTrack(filterVal: any) {
-    console.log("track filter")
     this.reactvalue = filterVal;
     const rele = this.elementRef.nativeElement.querySelector('angular-app');
-    console.log("rele ...",rele)
     rele.setAttribute('trackname', this.reactvalue);
   }
   

@@ -1,14 +1,37 @@
+.episodes{
+    padding: 12px 0px;
+    }
+    .episodes_title{
+      font-size: 32px;
+    }
+
+    .reset_filter{
+        border-style: none;
+        outline-style: none;
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 12px;
+        background-color: #1db954;
+        margin: 12px 0;
+    }
 .card_location{
-    border: 1px solid red;
-    width: 500px;
-    height: auto;
+    border: 1px solid #1db954;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #d2d8d8;
+    padding: 2px;
     border-radius: 12px;
+    margin: 4px;
     
 }
 
 .list_location{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
 }

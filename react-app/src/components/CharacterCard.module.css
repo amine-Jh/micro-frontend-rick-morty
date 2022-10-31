@@ -10,14 +10,13 @@
     align-items: flex-start;
     justify-content: start;
     margin: 12px;
-    background-color: #272828;
+    background-color: #d2d8d8;
     padding: 12px;
     border-radius: 12px;
 
 }
 
 .char_name{
-    color: #ffffff;
     text-transform: capitalize;
     margin-top: 12px;
     font-weight: bold;

@@ -7,7 +7,7 @@ class EvilPlanElement extends HTMLElement {
 
   _toggle = false;
 
-  _artistname = "test";
+  _artistname = "";
 
   get artistname() {
     return this._artistname;
@@ -24,7 +24,7 @@ class EvilPlanElement extends HTMLElement {
 
   set toggle(value) {
     this._plan = value;
-    ReactDOM.render(<App props={ {selectedvalue : this._selectedvalue,toggleval: this._toggle,artistName : this._artistname  } }></App>, this);
+    ReactDOM.render(<App props={ {selectedvalue : this._selectedvalue,toggleval: this._toggle,artistName : this._artistname  } }/>, this);
   }
 
   get toggle() {
@@ -57,6 +57,7 @@ class EvilPlanElement extends HTMLElement {
           ReactDOM.render(<App props={ {selectedvalue : this._selectedvalue,toggleval: this._toggle,artistName : this._artistname  } }></App>, this);
           return;
       case "artistname":
+        console.log("artiste from changed ",newValue)
             this._artistname=newValue;
             ReactDOM.render(<App props={ {selectedvalue : this._selectedvalue,toggleval: this._toggle,artistName : this._artistname  } }></App>, this);
             return;
